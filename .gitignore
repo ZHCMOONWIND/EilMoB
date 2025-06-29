@@ -1,0 +1,65 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# Virtual environments
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+env_backup/
+*.env
+
+# Package metadata
+*.egg-info/
+dist/
+build/
+
+# IDE/project config
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+*.out
+
+# Model checkpoints
+*.pth
+*.pt
+*.ckpt
+*.h5
+*.pb
+*.npz
+*.npy
+checkpoints/
+experiments/
+runs/
+results/
+saved_models/
+
+# Datasets and outputs
+datasets/
+output/
+logs/
+images/
+
+# pyproject/make
+*.so
+*.pyd
+
+# Configs & secrets (optional, depends on usage)
+config.yaml
+*.yml
+*.json
+
+# Slurm or other scheduler outputs (if applicable)
+slurm-*.out
