@@ -364,7 +364,7 @@ class LimCol(nn.Module):
 
         self.ReLu=nn.ReLU()
         self.dropout = nn.Dropout(p=0.1, inplace=False)
-        self.Gated_fusion = Gated_Fusion(args)
+        self.semantic_fusion = Gated_Fusion(args)
         self.softmax = nn.Softmax(dim=-1)
 
         self.vision_text_classifier = nn.Linear(768, 2)
