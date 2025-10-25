@@ -40,8 +40,18 @@ This project is based on the **MMSD** and **MMSD2.0** datasets, containing multi
 - The `text_data_clean/` directory holds the processed text portions of the MMSD2.0 dataset.
 - The `imgs/` folder contains corresponding visual modality data, categorized into:
   - `train/`, `val/`, and `test/` based on the dataset split.
-- The `llm/` folder holds emotion-aware textual features extracted using an LLM, stored in plain text files:
-  - Each line corresponds to a sample in the dataset split (`train.txt`, `val.txt`, `test.txt`).
+- The `llm/` folder holds emotion-aware textual features extracted using a Multi-modal Large Language Model (MLLM), specifically **Qwen2-VL-7B-Instruct**.  
+  -Each line corresponds to an **Emotion-aware Incongruity (EAI)** description for a sample in the dataset split (`train.txt`, `val.txt`, `test.txt`).
+
+EAI information is generated through a **three-aspect prompt template** released in the paper, which can be directly reused to regenerate EAI data.  
+The prompt guides the MLLM to extract:
+1. **Image Description** — captures visual entities, embedded text, and relational context.
+2. **Emotion Analysis** — infers the dominant emotional tone conveyed by the post.
+3. **Alignment Check** — identifies incongruities between the image and textual emotion.
+
+Since EAI is purely textual, it can be seamlessly integrated with the text modality to reduce modality gaps.  
+Users can reproduce these files by applying the public prompt to any MLLM supporting visual-text input (e.g., Qwen2-VL or similar).
+
 
 ## 🚀 Usage Instructions
 
@@ -83,5 +93,6 @@ If you use this work in your research, please cite:
 ```
 
 ------
+
 
 
